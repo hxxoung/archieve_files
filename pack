@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    const char* directory = "/path/to/location"; // Specify the target directory
+
+    if (mkdir(directory, 0777) == -1) {
+        fprintf(stderr, "Failed to create directory %s\n", directory);
+        return 1;
+    }
+
+    printf("Created directory %s\n", directory);
+
+    return 0;
+}
